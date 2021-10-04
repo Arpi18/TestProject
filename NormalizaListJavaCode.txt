@@ -1,15 +1,15 @@
 //Code to update given list of string
 package strTest;
+import java.util.List;
+import java.util.ArrayList;
 
-	import java.util.List;
-	import java.util.ArrayList;
 
-	public class strTestString {
-	
+public class strTestString2 {
+
+			
 		public static void main(String args[]){  
-			String newline = System.lineSeparator();
-
-			// let's create a list first 
+			
+			// Let's create a list first 
 			List<String> replacetoAnd = new ArrayList<String>(); 
 			replacetoAnd.add("Tromeo & Juliet"); 
 			replacetoAnd.add("Platoon"); 
@@ -17,11 +17,23 @@ package strTest;
 			replacetoAnd.add("Poltergeist III"); 
 			replacetoAnd.add("Harold and Kumar Go to White Castle"); 
 			replacetoAnd.add("Clerks II");
-			System.out.println("List before replace: " + newline + replacetoAnd);
+			
+			// Replace '&' to 'and' in list of sting everywhere
 			for ( int i=0; i<replacetoAnd.size()-1; i++) {
+			
 				replacetoAnd.set(i, replacetoAnd.get(i).replaceAll(" & "," and "));
+			
 			}
-				System.out.println("List after replace: " +newline+ replacetoAnd);
-		
+			
+				String outputString = ""; // this will be the output string as asked
+				
+		      for (String sPart:replacetoAnd)
+		      { 
+		    	  outputString=sPart + " ";
+		    	  System.out.println(outputString); // prints the output
+		      }
+
 		}
-	};
+		
+}
+	
